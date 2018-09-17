@@ -1,2 +1,3 @@
-# hexon
-Hexon Hugo theme for docs
+# Hexon Hugo Theme
+
+A theme for multi-section documentation.
