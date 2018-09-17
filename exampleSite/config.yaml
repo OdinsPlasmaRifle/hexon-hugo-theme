@@ -2,3 +2,19 @@ baseURL: "https://example.org/"
 languageCode: "en-us"
 title: "Hexon documentation"
 theme: "hexon-hugo-theme"
+
+params:
+  logoUrl: https://example.com
+  logoImage: /images/logo.png
+  heroImage: /images/hero.png
+
+  primaryColor: "#33C3F0"
+  secondaryColor: "#0FA0CE"
+
+  extraNavItems:
+    - title: Log in
+      url: https://example.com/login
+
+  extraFooterItems:
+    - title: Log in
+      url: https://example.com/login

@@ -3,9 +3,11 @@
 		<ul class="navbar-list">
 			{{ $currentSection := .Section }}
 			<li class="navbar-item">
-				<a href="https://rehive.com" class="navbar-logo-link">
-					<img src="/images/logo.svg">
-				</a>
+				{{ if isset .Site.Params "logourl"}}
+					<a href="{{ .Site.Params.logoUrl }}" class="navbar-logo-link">
+						<img src="{{ .Site.Params.logoImage }}">
+					</a>
+				{{ end }}
 			</li>
 			<li class="navbar-item">
 				<a href="{{ .Site.Home.Permalink }}" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
@@ -15,9 +17,12 @@
 					<a href="{{ .Permalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
 				</li>
 			{{ end }}
-			<li class="navbar-item navbar-last-item">
-				<a href="https://dashboard.rehive.com" class="navbar-link">Log in</a>
-			</li>
+
+			{{ range .Site.Params.extraNavItems }}
+				<li class="navbar-item navbar-right-item">
+					<a href="{{ .url }}" class="navbar-link">{{ .title }}</a>
+				</li>
+			{{ end }}
 		</ul>
 	</div>
 </nav>

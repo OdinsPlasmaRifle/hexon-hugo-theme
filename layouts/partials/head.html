@@ -8,11 +8,10 @@
 
 <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-<link rel="stylesheet" href="/css/normalize.css">
-<link rel="stylesheet" href="/css/skeleton.css">
-<link rel="stylesheet" href="/css/custom.css">
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/js/site.js"></script>
+{{ $normalize := resources.Get "css/normalize.css" }}
+{{ $skeleton := resources.Get "css/skeleton.css"  }}
+{{ $main := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS  }}
+{{ $css := slice $normalize $skeleton $main | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
 
 <link rel="icon" type="/image/png" href="/images/favicon.png">
