@@ -5,11 +5,13 @@ description: Install the Hexon theme.
 weight: 1
 ---
 
-Change into the themes directory and download a theme by replacing URL_TO_THEME with the URL of the theme repository:
+Navigate to your hugo `themes` folder and install with `git`:
 
-```
-cd themes
-git clone URL_TO_THEME
+```sh
+git clone git@github.com:OdinsPlasmaRifle/hexon-hugo-theme.git
 ```
 
-Alternatively, you can download the theme as a .zip file, unzip the theme contents, and then move the unzipped source into your themes directory.
+or if you want to install within an existing git repository:
+
+```sh
+git submodule add git@github.com:OdinsPlasmaRifle/hexon-hugo-theme.git

@@ -5,9 +5,11 @@ description: Customize the hexon theme.
 weight: 3
 ---
 
-There are a range of customizable values that can be defined in your Hugo config file. An example config can be found below:
+Hexon has many features that can be customized using the site's config file.
 
-```
+An example configuration file can be found below:
+
+```yaml
 baseURL: "https://example.org/"
 languageCode: "en-us"
 title: "Hexon documentation"
@@ -22,7 +24,7 @@ params:
   primaryColor: "#33C3F0"               # Primary site color.
   secondaryColor: "#0FA0CE"             # Secondary site color.
 
-  extraNavItems:						# Extra navbar links
+  extraNavItems:            # Extra navbar links
     - title: Log in
       url: https://example.com/login
 
@@ -30,3 +32,5 @@ params:
     - title: Log in
       url: https://example.com/login
 ```
+
+Additional customization can be done by overiding the assets, layouts and other data in the normal Hugo manner.
