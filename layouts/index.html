@@ -20,7 +20,7 @@
 							<div class="card">
 								<h4>{{ .Title }}</h4>
 								<p>{{ .Description }}</p>
-								<a class="button button-primary" href="{{ .Permalink }}">{{ .Title }} Docs</a>
+								<a class="button button-primary" href="{{ .Params.linkTo | default .Permalink }}">{{ .Title }} Docs</a>
 							</div>
 						</div>
 					{{ end }}
