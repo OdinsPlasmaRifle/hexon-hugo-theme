@@ -14,4 +14,5 @@
 {{ $css := slice $normalize $skeleton $main | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
 
-<link rel="icon" type="/image/png" href="/images/favicon.png">
+<link rel="icon" type="{{ .Site.Params.favicon }}" href="{{ .Site.Params.favicon }}">
+
