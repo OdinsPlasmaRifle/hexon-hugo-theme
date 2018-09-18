@@ -1,12 +1,12 @@
 # Hexon Hugo Theme
 
-A theme for multi-section documentation.
+A minimal theme for multi-section documentation in [Hugo](https://gohugo.io).
 
 ![screenshot of hexon](https://github.com/odinsplasmarifle/hexon-hugo-theme/blob/master/images/screenshot.png?raw=true)
 
 ## Quick start
 
-Navigate to your hugo `themes` folder and install with `git`:
+Navigate to your Hugo `themes` folder and install with `git`:
 
 ```sh
 git clone git@github.com:OdinsPlasmaRifle/hexon-hugo-theme.git
@@ -20,9 +20,9 @@ git submodule add git@github.com:OdinsPlasmaRifle/hexon-hugo-theme.git
 
 ## Usage
 
-Take a look at the `exampleSite` folder within the theme. You can copy the whole folders contents into your hugo project or just the parts you want.
+Take a look at the `exampleSite` folder within the theme. You can copy the whole folder's contents into your Hugo project or just the parts you want.
 
-Once done you can run the hugo development server:
+Once done you can run the Hugo development server:
 
 ```sh
 hugo server
@@ -32,7 +32,7 @@ You can then go to [localhost:1313](http://localhost:1313) to see the theme in a
 
 ### Strcuture
 
-The Hexon `content` directory must follow a pre-defined structure.
+Content in Hexon must follow a pre-defined structure.
 
 In short, the `content` directory should contain a list of nested sections and sub-sections with weighted pages:
 
