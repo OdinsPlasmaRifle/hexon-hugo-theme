@@ -21,7 +21,7 @@
 								<div class="card">
 									<h4>{{ .Title }}</h4>
 									<p>{{ .Description }}</p>
-									<a class="button button-primary" href="{{ .Params.linkTo | default .Permalink }}">{{ .Title }} Docs</a>
+									<a class="button button-primary" href="{{ .Params.linkTo | default .RelPermalink }}">{{ .Title }} Docs</a>
 								</div>
 							</div>
 						{{ end }}
@@ -30,9 +30,11 @@
 					<section class="links">
 						{{ if isset .Params "references" }}
 							<h4>Quick references</h4>
-							{{ range .Params.references }}
-								<a href="{{ .url }}" target="_blank">{{ .title }}</a>
-							{{ end }}
+							<ul>
+								{{ range .Params.references }}
+									<li><a href="{{ .url }}" target="_blank">{{ .title }}</a></li>
+								{{ end }}
+							</ul>
 						{{ end }}
 					</section>
 				</div>

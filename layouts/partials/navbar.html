@@ -10,11 +10,11 @@
 				{{ end }}
 			</li>
 			<li class="navbar-item">
-				<a href="{{ .Site.Home.Permalink }}" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
+				<a href="{{ .Site.Home.RelPermalink }}" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
 			</li>
 			{{ range (sort .Site.Sections ".Weight") }}
 				<li class="navbar-item">
-					<a href="{{ .Params.linkTo | default .Permalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
+					<a href="{{ .Params.linkTo | default .RelPermalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
 				</li>
 			{{ end }}
 

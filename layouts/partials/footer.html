@@ -4,7 +4,7 @@
 			<a href="/">Docs</a>
 			{{ $currentSection := .Section }}
 			{{ range (sort .Site.Sections ".Weight") }}
-				<a href="{{ .Params.linkTo | default .Permalink }}">{{ .Title }}</a>
+				<a href="{{ .Params.linkTo | default .RelPermalink }}">{{ .Title }}</a>
 			{{ end }}
 			{{ range .Site.Params.extraFooterItems }}
 				<a href="{{ .url }}">{{ .title }}</a>

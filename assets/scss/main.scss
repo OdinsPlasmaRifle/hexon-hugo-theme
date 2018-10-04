@@ -2,8 +2,10 @@ $hero: url("{{ .Site.Params.heroImage }}");
 
 $primary: {{ .Site.Params.primaryColor | default "#33C3F0" }};
 $secondary: {{ .Site.Params.secondaryColor | default "#0FA0CE" }};
-$white: #fff;
+$warningBoxColor: {{ .Site.Params.warningBoxColor | default "#f5e4f9" }};
+$noticeBoxColor: {{ .Site.Params.noticeBoxColor | default "#dfe5f4" }};
 $lightGray: #eee;
+$white: #fff;
 $gray: #666;
 $black: #222;
 
@@ -53,14 +55,25 @@ main.home {
 		margin: 10rem 0;
 		text-align: center;
 	}
-	.links a {
-
+	.links ul li {
+		list-style: none;
 	}
 }
 
 main .content {
  	padding: 4rem 0;
  	margin-bottom: 0;
+
+ 	aside {
+ 		padding: 1rem;
+ 		margin-bottom: 2rem;
+ 	}
+ 	aside.warning {
+ 		background-color: $warningBoxColor;
+ 	}
+ 	aside.notice {
+ 		background-color: $noticeBoxColor;
+ 	}
 }
 
 .navaside {
