@@ -183,6 +183,16 @@ footer {
 	}
 
 	// Show burger menu (Burger container and burger)
+	.mobile-navbar {
+		display: block;
+		width: 100%;
+		height: 6.5rem;
+		background: $white;
+		z-index: 99;
+		border-top: 1px solid $lightGray;
+		border-bottom: 1px solid $lightGray;
+	}
+
 	.burger-container {
 		margin: 15px;
 		cursor: pointer;
@@ -192,13 +202,13 @@ footer {
 		width: 35px;
 		height: 5px;
 		border-radius: 2px;
-		background-color: $primary;
+		background-color: $black;
 		margin: 6px 0;
 	}
 
 	.burger-container:hover {
 		.burger {
-			background-color: $secondary;
+			background-color: $primary;
 		}
 	}
 
@@ -221,13 +231,13 @@ footer {
 		padding: 8px 8px 8px 32px;
 		text-decoration: none;
 		font-size: 25px;
-		color: $primary;
+		color: $black;
 		display: block;
 		transition: 0.3s;
 	}
 	
 	.sidenav a:hover {
-		color: $secondary;
+		color: $primary;
 	}
 	
 	.sidenav .closebtn {
