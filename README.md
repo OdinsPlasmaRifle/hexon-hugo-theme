@@ -25,7 +25,7 @@ Take a look at the `exampleSite` folder within the theme. You can copy the whole
 Once done you can run the Hugo development server:
 
 ```sh
-hugo server
+hugo serve
 ```
 
 You can then go to [localhost:1313](http://localhost:1313) to see the theme in action.
