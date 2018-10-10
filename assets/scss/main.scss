@@ -109,55 +109,151 @@ footer {
 	}
 }
 
-.navbar {
-	display: block;
-	width: 100%;
-	height: 6.5rem;
-	background: $white;
-	z-index: 99;
-	border-top: 1px solid $lightGray;
-	border-bottom: 1px solid $lightGray;
+@media(min-width: 520px) {
+	.burger-container {
+		display: none;
+		visibility: hidden;
+	}
 
-	.container {
+	.sidenav {
+		display: none;
+		visibility: hidden;
+	}
+
+	.navbar {
+		display: block;
 		width: 100%;
+		height: 6.5rem;
+		background: $white;
+		z-index: 99;
+		border-top: 1px solid $lightGray;
+		border-bottom: 1px solid $lightGray;
+	
+		.container {
+			width: 100%;
+		}
+	
+		.navbar-list {
+			list-style: none;
+			margin-bottom: 0;
+		}
+	
+		.navbar-item {
+			position: relative;
+			float: left;
+			margin-bottom: 0;
+		}
+	
+		.navbar-right-item {
+			float: right;
+		}
+	
+		.navbar-logo-link {
+			display: block;
+			margin-right: 20px;
+		}
+	
+		.navbar-logo-link img {
+			display: block;
+			height: 4.8rem;
+			padding: 0.6rem 0;
+		}
+	
+		.navbar-link {
+			font-size: 11px;
+			font-weight: 600;
+			letter-spacing: .2rem;
+			margin-right: 35px;
+			line-height: 6.5rem;
+			color: $black;
+		}
+	
+		.navbar-link.active {
+			color: $primary;
+		}
+	}
+}
+
+// Mobile
+@media(max-width: 520px) {
+	// Hide main navbar
+	.navbar {
+		display: none;
+		visibility: hidden;
 	}
 
-	.navbar-list {
-		list-style: none;
-		margin-bottom: 0;
-	}
-
-	.navbar-item {
-		position: relative;
-		float: left;
-		margin-bottom: 0;
-	}
-
-	.navbar-right-item {
-		float: right;
-	}
-
-	.navbar-logo-link {
+	// Show burger menu (Burger container and burger)
+	.mobile-navbar {
 		display: block;
-		margin-right: 20px;
+		width: 100%;
+		height: 6.5rem;
+		background: $white;
+		z-index: 99;
+		border-top: 1px solid $lightGray;
+		border-bottom: 1px solid $lightGray;
 	}
 
-	.navbar-logo-link img {
-		display: block;
-		height: 4.8rem;
-		padding: 0.6rem 0;
+	.burger-container {
+		margin: 15px;
+		cursor: pointer;
 	}
 
-	.navbar-link {
-		font-size: 11px;
-		font-weight: 600;
-		letter-spacing: .2rem;
-		margin-right: 35px;
-		line-height: 6.5rem;
+	.burger {
+		width: 35px;
+		height: 5px;
+		border-radius: 2px;
+		background-color: $black;
+		margin: 6px 0;
+	}
+
+	.burger-container:hover {
+		.burger {
+			background-color: $primary;
+		}
+	}
+
+	// Side nav styles for mobile
+	.sidenav {
+		height: 100%;
+		width: 0; 
+		position: fixed; 
+		z-index: 1; 
+		top: 0;
+		left: 0;
+		overflow-x: hidden; 
+		padding-top: 60px; 
+		transition: 0.5s;
+		border-right: 1px solid $lightGray;
+		background-color: $white;
+	}
+	
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
 		color: $black;
+		display: block;
+		transition: 0.3s;
+	}
+	
+	.sidenav a:hover {
+		color: $primary;
+	}
+	
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+	
+	@media screen and (max-height: 450px) {
+		.sidenav {padding-top: 15px;}
+		.sidenav a {font-size: 18px;}
 	}
 
-	.navbar-link.active {
-		color: $primary;
+	.logo {
+		max-width: 150px;
 	}
 }
