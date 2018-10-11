@@ -130,7 +130,7 @@ footer {
 	}
 }
 
-@media(min-width: 520px) {
+@media(min-width: 550px) {
 	.burger-container {
 		display: none;
 		visibility: hidden;
@@ -188,6 +188,10 @@ footer {
 			line-height: 6.5rem;
 			color: $black;
 		}
+		.navbar-right-item .navbar-link {
+			margin-right: 0;
+			margin-left: 35px;
+		}
 
 		.navbar-link.active {
 			color: $primary;
@@ -196,7 +200,7 @@ footer {
 }
 
 // Mobile
-@media(max-width: 520px) {
+@media(max-width: 550px) {
 	// Hide main navbar
 	.navbar {
 		display: none;
