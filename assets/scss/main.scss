@@ -16,6 +16,12 @@ a {
 a:hover {
 	color: $secondary;
 }
+a.heading {
+	color: $black;
+}
+a.heading:hover {
+	color: $secondary;
+}
 
 .button.button-primary {
 	background-color: $primary;
