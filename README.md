@@ -100,7 +100,7 @@ params:
   primaryColor: "#33C3F0"               # Primary site color.
   secondaryColor: "#0FA0CE"             # Secondary site color.
 
-  extraNavItems:						# Extra navbar links
+  extraNavItems:			# Extra navbar links
     - title: Log in
       url: https://example.com/login
 
