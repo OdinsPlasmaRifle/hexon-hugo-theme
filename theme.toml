@@ -1,0 +1,13 @@
+name = "Hexon"
+license = "MIT"
+licenselink = "https://github.com/OdinsPlasmaRifle/hexon-hugo-theme/blob/master/LICENSE"
+description = "A theme for multi-section documentation."
+homepage = "https://github.com/OdinsPlasmaRifle/hexon-hugo-theme"
+tags = ["documentation"]
+features = []
+min_version = "0.48"
+pygmentsUseClasses = true
+
+[author]
+  name = "OdinsPlasmaRifle"
+  homepage = "odinsplasmarifle.github.io"
