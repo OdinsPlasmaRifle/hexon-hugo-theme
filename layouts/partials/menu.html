@@ -7,7 +7,7 @@
 				<ul>
 					{{ range (sort .Pages ".Weight") }}
 						<li>
-							<a href="{{ .Permalink }}" class="{{ if in .UniqueID $currentPage.UniqueID }}active{{ end }}">{{ .Title }}</a>
+							<a href="{{ .RelPermalink }}" class="{{ if in .UniqueID $currentPage.UniqueID }}active{{ end }}">{{ .Title }}</a>
 						</li>
 					{{ end }}
 				</ul>
