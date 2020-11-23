@@ -8,6 +8,12 @@ features = []
 min_version = "0.48"
 pygmentsUseClasses = true
 
+[markup]
+  [highlight]
+    noClasses = false
+    style = "dracula"
+    tabWidth = 4
+
 [author]
   name = "OdinsPlasmaRifle"
   homepage = "odinsplasmarifle.github.io"
