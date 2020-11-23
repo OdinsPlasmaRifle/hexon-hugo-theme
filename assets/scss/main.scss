@@ -23,6 +23,11 @@ a.heading:hover {
 	color: $secondary;
 }
 
+code {
+	padding: 1rem;
+  	border-radius: 4px;
+}
+
 .button.button-primary {
 	background-color: $primary;
 	border-color: $primary;
