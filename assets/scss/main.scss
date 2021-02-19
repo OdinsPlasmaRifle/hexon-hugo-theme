@@ -47,6 +47,7 @@ main.home {
 		height: 40rem;
 		text-align: center;
 		background-image: $hero;
+		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
