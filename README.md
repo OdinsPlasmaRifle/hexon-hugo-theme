@@ -30,7 +30,7 @@ hugo serve
 
 You can then go to [localhost:1313](http://localhost:1313) to see the theme in action.
 
-### Strcuture
+### Structure
 
 Content in Hexon must follow a pre-defined structure.
 
